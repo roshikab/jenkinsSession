@@ -12,12 +12,12 @@ pipeline{
             parallel{
               stage("CI Machine#1"){
                 steps{
-                    bat "yarn cypress run --parallel"
+                    bat "npx cypress run --record --key e4d5b964-9cb5-46d6-bbc4-60f7f295689c"
                 }
               }
                stage("CI Machine#2"){
                 steps{
-                    bat "yarn cypress run --parallel"
+                    bat "npx cypress run --record --key e4d5b964-9cb5-46d6-bbc4-60f7f295689c"
                 }
               }
             }
