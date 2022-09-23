@@ -12,12 +12,12 @@ pipeline{
             parallel{
               stage("CI Machine#1"){
                 steps{
-                    bat "yarn cypress run --record --key e4d5b964-9cb5-46d6-bbc4-60f7f295689c"
+                    bat "yarn cypress run --key=e4d5b964-9cb5-46d6-bbc4-60f7f295689c --record --parallel --ci-build-id 5 --group parallel_run"
                 }
               }
                stage("CI Machine#2"){
                 steps{
-                    bat "yarn cypress run --record --key e4d5b964-9cb5-46d6-bbc4-60f7f295689c"
+                    bat "yarn cypress run --key=e4d5b964-9cb5-46d6-bbc4-60f7f295689c --record --parallel --ci-build-id 5 --group parallel_run"
                 }
               }
             }
